@@ -6,11 +6,11 @@ internal class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Deseja utilizar a calculadora? (s/n)");
-        string operacao = Console.ReadLine();
+        string calculo = Console.ReadLine();
 
-        while (operacao == "s")
+        while (calculo == "s")
         {
-            if (operacao == "n")
+            if (calculo == "n")
             {
                 break;
             }
@@ -18,13 +18,16 @@ internal class Program
             Console.WriteLine("Digite o primeiro número: ");
             double n1 = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Digite o segundo  número: ");
+            Console.WriteLine("Digite o segundo número: ");
             double n2 = double.Parse(Console.ReadLine());
 
-            double resultadosoma = n1 + n2;
-            double resultadomultiplicacao = n1 * n2;
-            double resultadodivisao = n1 / n2;
-            double resultadosubtracao = n1 - n2;
+            Console.WriteLine("Digite o terceiro número: ");
+            double n3 = double.Parse(Console.ReadLine());
+
+            double resultadosoma = n1 + n2 + n3;
+            double resultadomultiplicacao = n1 * n2 * n3;
+            double resultadodivisao = (n1 / n2) / n3;
+            double resultadosubtracao = (n1 - n2) - n3;
 
             Console.WriteLine($"O resultado da soma destes dois números é: {resultadosoma}");
             Console.WriteLine($"O resultado da multiplicação destes dois números é: {resultadomultiplicacao}");
@@ -32,7 +35,7 @@ internal class Program
             Console.WriteLine($"O resultado da subtração destes dois números é: {resultadosubtracao}");
             
             Console.WriteLine("Deseja continuar utilizando a calculadora? (s/n)");
-            operacao = Console.ReadLine();
+            calculo = Console.ReadLine();
 
         }
     }
