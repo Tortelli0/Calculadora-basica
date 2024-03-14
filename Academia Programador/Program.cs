@@ -1,7 +1,9 @@
 ﻿#nullable disable
 using System.Net;
+using System.Net.Sockets;
 
-namespace AP;
+namespace Calculadora;
+//Eduardo Tortelli
 
 internal class Program
 {
@@ -10,6 +12,19 @@ internal class Program
         Console.WriteLine("Bem vindo a Calculadora!");
         Console.WriteLine("Deseja começar uma operação? (s/n)");
         string calculo = Console.ReadLine();
+
+        if (calculo == "n")
+        {
+            Console.WriteLine("\nCaso queira continuar o programa digite S.");
+            calculo = Console.ReadLine();
+        }
+
+        while( calculo != "s")
+        {
+            Console.WriteLine("\nOpção inválida, digite novamente.");
+            Console.WriteLine("Deseja começar uma operação? (s/n)");
+            calculo = Console.ReadLine();
+        }
 
         Console.WriteLine("\nDigite 1 para realizar todas as operações e 2 para escolher a operação: ");
         int opçoes = int.Parse(Console.ReadLine());
@@ -68,7 +83,7 @@ internal class Program
                     Console.WriteLine("Digite 2 para Subtrair");
                     Console.WriteLine("Digite 3 para Multiplicar");
                     Console.WriteLine("Digite 4 para Dividir");
-                    Console.WriteLine("Digite S para sair\n");
+                    Console.WriteLine("Digite s para sair\n");
                     double pergunta = double.Parse(Console.ReadLine());
 
                     Console.WriteLine("\nDigite o primeiro número: ");
