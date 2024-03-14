@@ -65,7 +65,6 @@ internal class Program
                 Console.WriteLine($"\nO resultado da subtração destes dois números é: {resultadosubtracao}");
                 Console.WriteLine("\nDeseja continuar utilizando a calculadora? (s/n)");
                 calculo = Console.ReadLine();
-                break;
 
             }
         }
